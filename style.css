@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111827;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+/*-----------------------------------Navigation------------------------------*/
+nav{
+    height: 80px;
+    width: 100%;
+}
+.logo img{
+    height: 75px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 75px;
+    margin: 0 15px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+nav ul li a:hover,a.active{
+    background:red;
+    transition: 0.5s;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+a.active:hover{
+    background: white;
+    color: red;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 75px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media(max-width: 952px){
+    .logo img{
+        height: 70px;
+        padding-left: 10px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+@media(max-width: 500px){
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align:center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+/*-----------------------------------Header------------------------------*/
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 80px;
+    padding-top: 60px;
+    color: white;
+    height: 70vh;
+}
+.flex-left{
+    width: 50%;
+    height: 400px;
+}
+.flex-left p{
+    font-size: 16px;
+    padding-top: 15px;
+    text-align: left;
+}
+.flex-left img{
+    padding: 0 10px;
+}
+
+
+.flex-right{
+    width: 50%;
+    height: 400px;
+}
+.flex-right img{
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+.mid-img{
+    position: relative;
+    bottom: 40px;
+}
+
+.first{
+    color: white;
+}
+span{
+    color: red;
+}
+@media(max-width: 500px){
+    .flex-container{
+        padding: 0px 40px;
+        margin-top: 40px;
+        height: 64vh;
+    }
+    .flex-left{
+        padding-top: 30px;
+        width: 50%;
+        height: 400px;
+    }
+    .flex-left h1{
+        font-size: 16px;
+    }
+    .flex-left p{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .store-icon{
+        height: 65px;
+        width: 75px;
+    }
+    .flex-right{
+        padding-top: 10px;
+        width: 50%;
+        height: 400px;
+    }
+    .flex-right img{
+        margin: 5px 60px;
+        height: 150px;
+        width: 90px;
+        max-width: 100%;
+        border-radius:15px;
+    }
+    .mid-img{
+        display: none;
+    }
+
+
+}
+/*-------------------------------Footer--------------------------------*/
+footer{
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    color: #ffffff;
+    background-color: #0a0e16;
+    padding: 10px 10px;
+}
+.left-section{
+    width: 50%;
+    
+}
+.left-section p{
+    padding-left: 15px;
+}
+.right-section{
+    width: 25%;
+}
+.right-section p{
+    padding-top: 10px;
+}
+.center-section{
+    width: 25%;
+}
+.center-section ul{
+    margin-top: 10px;
+}
+.center-section ul li{
+    font-size: 12px;
+    line-height: 20px;
+    list-style: none;
+    color: #fff;
+}
+@media(max-width: 500px){
+footer{
+    height: 168px;
+    padding: 15px 5px;
+}
+.left-section{
+    width: 50%;
+}
+.left-section img{
+    height: 50px;
+    width: 150px;
+}
+.left-section p{
+    font-size: 12px;
+    line-height: 1.5;
+}
+.center-section{
+    display: none;
+}
+
+.right-section{
+    width: 50%;
+    padding: 10px 10px;
+
+}
+.right-section h3{
+    font-size: 14px;
+    margin-top:8px;
+    margin-bottom: 15px;
+}
+.right-section p{
+    padding-top: 0;
+    font-size: 12px;
+    margin-right: 20px;
+    line-height: 1.5;
+}
+}
+/*------------------------------About Page-----------------------------*/
+
+.flex-right h3{
+    margin-bottom: 20px;
+}
+.flex-right p{
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.redbtn{
+    background-color: red;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 4px;
+}
+.redbtn:hover{
+    background-color: purple;
+    transition: 0.5s;
+}
+.about-img{
+    margin-top: 50px;
+}
+@media(max-width:500px){
+    .flex-container{
+        padding: 0 10px;
+    }
+    .flex-right h3{
+        margin-bottom: 10px;
+    }
+    .flex-right p{
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .redbtn{
+        padding: 4px 4px;
+    }
+    .about-img{
+        margin-top: 100px;
+        height: 80px;
+        width: 170px;
+    }
+    
+}
+/*------------------------------Video-----------------------------*/
+.video-container{
+    background-image: url(image/exerciseb2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 15px;
+}
+
+.video-left{
+    width: 40%;
+}
+.video-left p{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+video{
+
+    margin: 0 10px;
+    float: left;
+}
+.video-right{
+width: 60%;
+
+}
+@media(max-width:500px){
+    .video-container{
+        display: flex;
+        flex-direction: column;
+        height: 550px;
+    }
+    .video-left{
+        width: 100%;
+        height: 250px;
+    }
+    .video-left p{
+        font-size: 14px;
+    }
+    .video-right{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+    video{
+    height: 150px;
+    width: 180px;
+    padding: 10px 20px;
+    }
+    
+}
+/*-------------------------------------FAQ--------------------------------------*/
+.left-article{
+    padding: 10px 20px;
+}
+.right-article{
+    padding:10px 20px;
+}
+.smalltext{
+    padding-top: 40px;
+    font-size: 20px;
+}
+.content{
+    display: flex;
+    margin: 30px 10px;
+}
+.content p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.content img{
+    height: 80px;
+    width: 160px;
+}
+.redbtn2{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.redbtn2:hover{
+    background-color: white;
+    color: red;
+    
+}
+@media(max-width:500px){
+.article-container{
+    height: 115vh;
+    display: flex;
+    flex-direction: row;
+}
+.left-article{
+    order: 2;
+width: 100%;
+height: 450px;
+}
+.content{
+    margin: 20px 0;
+}
+.content img{
+    height: 100px;
+    width: 170px;
+    margin-top: 18px;
+}
+.content p{
+    font-size: 12px;
+}
+.right-article{
+width: 100%;
+height: 240px;
+}
+
+}
+
+/*---------------------------------------Success Stories------------------------------*/
+.story-container{
+height: 500px;
+background-image: url(image/exerciseb2.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+margin-top: 10px;
+}
+.story-left{
+    padding: 10px 20px;
+}
+.story-left p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.story-left i{
+    margin-top: 30px;
+    margin-right:20px;
+}
+.story-left i:hover{
+    color: red;
+}
+.story-right{
+    border: 1px solid white;
+    padding: 20px;
+}
+.story-right h3{
+    margin-bottom: 5px;
+}
+.story-img{
+    height: 120px;
+    width: 100px;
+    position: absolute;
+    left: 85%;
+    top: 70%;
+    border-radius: 0px;
+    overflow: hidden;
+}
+@media(max-width:500px){
+.story-container{
+    padding: 10px 10px;
+    height: 650px;
+}
+.story-container p{
+    font-size: 16px;
+}
+.story-img{
+    display: none;
+}
+.story-left{
+    padding: 10px 5px;
+    height: 620px;
+}
+.story-right{
+    padding: 10px 5px;
+    height: 620px;
+}
+}
